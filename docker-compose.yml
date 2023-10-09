@@ -18,7 +18,14 @@ services:
       - "80:80"
     depends_on:
       - app
-
+ 
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/sample_app:/app
+ 
   mysql:
     image: mysql:8.0
     environment:
