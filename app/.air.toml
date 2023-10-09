@@ -1,0 +1,14 @@
+[build]
+  cmd = "go build -o ./tmp/main ."
+  bin = "./tmp/main"
+  log = "air.log"
+
+[watch]
+  includes = [
+    "*.go",
+    "go.mod",
+    "go.sum"
+  ]
+  excludes = [
+    "tmp/*"
+  ]
